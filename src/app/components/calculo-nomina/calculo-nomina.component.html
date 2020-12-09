@@ -1,0 +1,31 @@
+<div class="alert alert-primary" style="height:500px">
+    <div class="container w-50 ">
+        <h1 class="text-center mt-3">Calcular nomina</h1>
+        <div class="row">
+            <div class="col">
+                <form [formGroup]="formulario">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="idTecnico">ID Tecnico</label>
+                                <input type="text" formControlName="idTecnico" (blur)="blurCampoIdTecnico()" class="form-control" id="idTecnico"
+                                    placeholder="Ingrese la identificacion del tecnico">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="nombreTecnico">Nombre tecnico</label>
+                                <input type="text" formControlName="nombreTecnico" class="form-control" id="nombreTecnico" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="semana">Semana</label>
+                        <input type="week" formControlName="semana" class="form-control" id="semana">
+                    </div>                    
+                    <button type="submit" class="btn btn-primary mt-3" (click)="redireccionar('nomina')">Validar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
